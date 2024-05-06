@@ -1,0 +1,1004 @@
+:root {
+    --main-font-light: "Roboto Light", sans-serif;
+    --main-font-thin: "Roboto thin", sans-serif;
+}
+
+/* END ROOT */
+/* ---------------------------------------- */
+/* START ANIMATION FOR GRADIENT BACKGROUND */
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* END ANIMATION FOR GRADIENT BACKGROUND */
+/* ---------------------------------------- */
+/* START FOR ALL */
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.contentWindow {
+    position: absolute;
+    top: 60px;
+    left: 150px; 
+    width: calc(100vw - 170px);
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+/* END FOR ALL */
+/* ---------------------------------------- */
+/* START GRADIENT BACKGROUND */
+
+#index__gradientBackground  {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,10,1) 25%, rgba(16, 0, 111, 1) 50%,rgba(15, 35, 212, 1) 75%,  rgba(85, 91, 238, 1) 100%);
+    background-size: 200% 300%;
+    background-position: -100% 0;
+    animation: AnimateBG 15s ease infinite;
+    position: relative;
+}
+
+#work__backgroundGradient {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,10,1) 25%, rgba(79,0,0,1) 50%, rgba(131,95,0,1) 75%, rgba(228,193,6,1) 100%);
+    background-size: 200% 300%;
+    background-position: -100% 0;
+    animation: AnimateBG 15s ease infinite;
+    position: relative;
+}
+
+#contact__gradientBackground {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(13,9,26,1) 25%, rgba(65,49,122,1) 50%, rgba(145,114,255,1) 75%, rgba(255,129,227,1) 100%);
+    background-size: 200% 300%;
+    background-position: -100% 0;
+    animation: AnimateBG 15s ease infinite;
+    position: relative;
+}
+
+#about__gradientBackground {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(130,89,32);
+    background: radial-gradient(circle, rgba(130,89,32,1) 0%, rgba(142,90,33,1) 25%, rgba(159,120,91,1) 50%, rgba(145,114,255,1) 75%, rgba(129,255,187,1) 100%);
+    background-size: 200% 300%;
+    background-position: -100% 0;
+    animation: AnimateBG 15s ease infinite;
+    position: relative;
+}
+
+/* END GRADIENT BACKGROUND */
+/* ---------------------------------------- */
+/* START FOR ALL */
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#header > a {
+    text-decoration: none;
+}
+
+.logoHeader {
+    font-family: var(--main-font-light);
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    color: white;
+    opacity: 0;
+}
+
+.userWay {
+    position: absolute;
+    color: white;
+    font-family: var(--main-font-thin);
+    display: flex;
+    left: 150px;
+}
+
+.lighter {
+    font-weight: 100;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.header__socialMedia {
+    width: auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+}
+
+.header__socialMediaIcone {
+    width: 35px;
+}
+
+.mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+  }
+
+
+  a.icon {
+    background: black;
+    display: block;
+  }
+
+/* END HEADER */
+/* ---------------------------------------- */
+/* START SIDEBAR */
+
+#sideBar {
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+}
+
+#mainNavSideBar {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    transform: translate(0,-60px);
+}
+
+#mainNavSideBar ul {
+    list-style: none;
+}
+
+#mainNavSidebar ul li {
+    opacity: 0;
+}
+
+#mainNavSideBar ul li a {
+    text-decoration: none;
+}
+
+.mainNavSideBar__activeMenu {
+    font-family: var(--main-font-light);
+    font-size: 16px;
+    font-weight: lighter;
+    color: white;
+}
+
+.mainNavSideBar__activeMenu:active {
+    font-size: 5vw;
+    color: white;
+    font-weight: bold;
+}
+
+.mainNavSideBar__menu {
+    font-family: var(--main-font-light);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+
+.mainNavSideBar__menu:hover {
+    font-size: 4vw;
+    color: white;
+    font-weight: bold;
+}
+
+/* END SIDEBAR */
+/* ---------------------------------------- */
+/* START FOOTER */
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.footer__hr__to3div {
+    position: absolute;
+    top: -2px;
+    height: 100%;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__separationLine {
+    height: 2px;
+    width: 100%;
+    background-color: rgba(255,255,255,1);
+    opacity: 0;
+    border: none;
+}
+
+.footer__to3div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.div1 {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div1 h4 {
+    font-family: var(--main-font-light);
+    color: white;
+    font-size: 14px;
+}
+
+.div1 p {
+    font-family: var(--main-font-thin);
+    color: white;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.div2 {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div2__slogan {
+    display: flex;
+    flex-direction: column;
+}
+
+.sloganLine1 {
+    font-family: var(--main-font-thin);
+    color: white;
+    font-size: 28px;
+}
+
+.sloganLine2 {
+    font-family: var(--main-font-thin);
+    font-weight: lighter;
+    color: white;
+    font-size: 28px;
+}
+
+.sloganLine3 {
+    font-family: var(--main-font-light);
+    font-weight: bolder;
+    color: white;
+    font-size: 28px;
+}
+
+#div3 {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.div3__infoStudy {
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#div3 h2 {
+    font-family: var(--main-font-light);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    display: inline;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+#div3 p {
+    font-family: var(--main-font-thin);
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+    display: inline;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-container p {
+    font-family: var(--main-font-thin);
+    font-size: 12px;
+    font-weight: lighter;
+    color: white;
+    margin-right: 10px;
+}
+
+.mode-toggle {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.mode-toggle:checked + .toggle-label {
+    background-color: darkslategrey; /* Change color when in dark mode */
+}
+
+.toggle-label::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.mode-toggle:checked + .toggle-label::before {
+    transform: translateX(20px);
+}
+
+
+/* -- WORK --*/
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-family: var(--main-font-light);
+}
+
+.carousel__list {
+    display: flex;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 350px;
+    justify-content: center;
+    perspective: 300px;
+}
+
+.carousel__item > * {
+    pointer-events: none;
+}
+
+.carousel__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 300px;
+    height: 350px;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.5);
+    position: absolute;
+    transition: all 0.3s ease-in;
+    padding: 20px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.image-container {
+    width: 260px;
+    height: 50%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.textContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textContent h3 {
+    color: white;
+    font-family: var(--main-font-light);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.textContent p {
+    color: rgba(255,255,255,0.75);
+    font-family: var(--main-font-light);
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.carousel__item:nth-child(1) {
+    background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.20) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.carousel__item:nth-child(2) {
+    background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.20) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.carousel__item:nth-child(3) {
+    background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.20) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.carousel__item:nth-child(4) {
+    background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.20) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.carousel__item:nth-child(5) {
+    background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.20) 100%);
+    backdrop-filter: blur(10px);
+}
+
+/* Je donne du style au position et non au cartes, il s'appliquera donc lorsqu'une carte prend une position */
+.carousel__item[data-pos="0"] {
+    z-index: 5;
+    border: 1px solid white;
+}
+
+.carousel__item[data-pos="-1"], .carousel__item[data-pos="1"] {
+    opacity: 0.7;
+    filter: blur(1px) grayscale(10%);
+}
+.carousel__item[data-pos="-1"] {
+    transform: translateX(-40%) scale(0.9);
+    z-index: 4;
+}
+.carousel__item[data-pos="1"] {
+    transform: translateX(40%) scale(0.9);
+    z-index: 4;
+}
+.carousel__item[data-pos="-2"], .carousel__item[data-pos="2"] {
+    opacity: 0.4;
+    filter: blur(3px) grayscale(20%);
+}
+.carousel__item[data-pos="-2"] {
+    transform: translateX(-70%) scale(0.8);
+    z-index: 3;
+}
+.carousel__item[data-pos="2"] {
+    transform: translateX(70%) scale(0.8);
+    z-index: 3;
+}
+
+
+/* ABOUT */
+
+.about__content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about__content__card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about__content__card > h3 {
+    color: white;
+    font-size: 20px;
+    font-family: var(--main-font-light);
+    font-weight: 700;
+}
+
+.about__content__card > p {
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    font-family: var(--main-font-light);
+    font-weight: 300;
+}
+
+
+
+/* CONTACT */
+
+form {
+    width: 50%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form label {
+    display: none;
+}
+
+#firstLine {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#firstInput {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#secondInput {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#name,
+#secondName {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
+}
+
+#firstInput__errorIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#firstInput__successIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#secondLine {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#secondInput__errorIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#secondInput__successIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#adresse,
+#postalCode,
+#city {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
+}
+
+#thirdInput {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#thirdInput__errorIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#thirdInput__successIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#forthInput {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#forthInput__errorIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#forthInput__successIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#fifthInput {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#sixthInput {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#seventhInput {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#fifthInput__errorIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#fifthInput__successIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#seventhInput__errorIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#seventhInput__successIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#thirdLine {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#email,
+#phone {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
+}
+
+#sixthInput__errorIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#sixthInput__successIcone {
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#forthLine {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#message {
+    min-width: 100%;
+    min-height: 150px;
+    max-height: 200px;
+    padding: 10px;
+    border-radius: 25px;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
+}
+
+#fifthLine {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fifthLine button {
+    width: 50%;
+    padding: 10px 0;
+    background-color: #ff81e3;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-family: '.AppleSystemUIFont', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.15s ease-in;
+}
+
+#fifthLine button:hover {
+    background-color: #9172ff;
+    transform: translateY(5px);
+}
+
+@media (max-width: 800px) {
+    .userWay {
+        display: none;
+    }
+
+    #sideBar {
+        display: none;
+    }
+
+    footer {
+        height: 400px;
+        position: absolute;
+        top: 100vh;
+        padding: 10px 0;
+    }
+
+    .footer__to3div {
+        flex-direction: column;
+    }
+
+    .div1 {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div2 {
+        width: 100%;
+    }
+
+    #div3 {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contentWindow {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    form {
+        width: calc(100% - 100px);
+        height: auto;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    form > div {
+        flex-direction: column; /* Change l'orientation en colonne */
+        width: 100%;
+    }
+
+    #firstLine {
+        width: 200%;
+    }
+
+    #secondLine {
+        width: 300%; 
+    }
+
+    #thirdLine {
+        width: 200%;
+    }
+
+    .contentWindow {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .carousel__list {
+        display: flex;
+        list-style: none;
+        position: relative;
+        width: 100%;
+        height: 350px;
+        justify-content: center;
+        perspective: 300px;
+    }
+    
+    
+    .carousel__item > * {
+        pointer-events: none;
+    }
+    
+    .carousel__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 150px;
+        height: 200px;
+        border-radius: 30px;
+        box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.5);
+        position: absolute;
+        transition: all 0.3s ease-in;
+        padding: 20px;
+        gap: 20px;
+        cursor: pointer;
+    }
+    
+    .image-container {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .textContent{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .textContent h3 {
+        color: white;
+        font-family: var(--main-font-light);
+        font-weight: bolder;
+        font-size: 14px;
+    }
+    
+    .textContent p {
+        color: rgba(255,255,255,0.75);
+        font-family: var(--main-font-light);
+        font-weight: lighter;
+        font-size: 10px;
+    }
+}
